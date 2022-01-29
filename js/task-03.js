@@ -24,7 +24,10 @@ const list = document.querySelector(".gallery");
 // });
 
 const element = images
-  .map((image) => `<img class="el__image" src=${image.url} alt="${image.alt}">`)
+  .map(
+    (image) =>
+      `<img class="el__image" src=${image.url} alt="${image.alt}" width = 240>`
+  )
   .join("");
 
 list.insertAdjacentHTML("beforeend", element);
