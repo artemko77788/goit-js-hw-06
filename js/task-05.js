@@ -8,7 +8,7 @@ refs.input.addEventListener("input", onInput);
 const text = refs.spanText.textContent;
 
 function onInput(event) {
-  if (event.currentTarget.value.length >= 1) {
+  if (event.currentTarget.value.trim() !== "") {
     refs.spanText.textContent = event.currentTarget.value;
   } else {
     refs.spanText.textContent = text;

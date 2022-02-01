@@ -12,12 +12,9 @@ function onFormSubmit(event) {
     alert("Заполните все поля");
   } else {
     const formData = new FormData(event.currentTarget);
-    // console.log(formData);
-    formData.forEach((value, name) => {
-      const dataValue = { [name]: value };
 
-      console.log(dataValue);
-    });
+    console.log(Object.fromEntries(formData));
+    Object.fromEntries(formData);
   }
 
   inputForm.reset();

@@ -5,9 +5,16 @@ console.log("Number of categories:", categoriesCount);
 
 const items = document.querySelectorAll(".item");
 
-for (let item of items) {
-  let nameCategory = item.firstElementChild.textContent;
+// for (let item of items) {
+//   let nameCategory = item.firstElementChild.textContent;
+//   console.log(`Category: ${nameCategory} `);
+//   let elements = item.lastElementChild.children.length;
+//   console.log(`Elements: ${elements}`);
+// }
+
+items.forEach((element) => {
+  let nameCategory = element.firstElementChild.textContent;
   console.log(`Category: ${nameCategory} `);
-  let elements = item.lastElementChild.children.length;
+  let elements = element.lastElementChild.children.length;
   console.log(`Elements: ${elements}`);
-}
+});
